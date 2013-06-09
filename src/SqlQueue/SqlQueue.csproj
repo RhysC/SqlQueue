@@ -54,19 +54,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseContextFactory.cs" />
+    <Compile Include="IMessage.cs" />
     <Compile Include="Infrastructure\ConnectionStringProvider.cs" />
     <Compile Include="Infrastructure\DatabaseContextFactory.cs" />
     <Compile Include="Infrastructure\IConnectionStringProvider.cs" />
     <Compile Include="Infrastructure\QueueDataContext.cs" />
-    <Compile Include="Message.cs" />
-    <Compile Include="Migrations\201306081712328_InitialCreate.cs" />
-    <Compile Include="Migrations\201306081712328_InitialCreate.Designer.cs">
-      <DependentUpon>201306081712328_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201306090716186_InitialCreate.cs" />
+    <Compile Include="Migrations\201306090716186_InitialCreate.Designer.cs">
+      <DependentUpon>201306090716186_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201306081726192_InitialSetUp.cs" />
-    <Compile Include="Migrations\201306081726192_InitialSetUp.Designer.cs">
-      <DependentUpon>201306081726192_InitialSetUp.cs</DependentUpon>
-    </Compile>
+    <Compile Include="PersistedMessage.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="QueueWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,11 +73,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201306081712328_InitialCreate.resx">
-      <DependentUpon>201306081712328_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201306081726192_InitialSetUp.resx">
-      <DependentUpon>201306081726192_InitialSetUp.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201306090716186_InitialCreate.resx">
+      <DependentUpon>201306090716186_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

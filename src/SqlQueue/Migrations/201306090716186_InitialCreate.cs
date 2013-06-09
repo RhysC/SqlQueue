@@ -1,6 +1,5 @@
 namespace SqlQueue.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
     
     public partial class InitialCreate : DbMigration
@@ -13,8 +12,10 @@ namespace SqlQueue.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         CreatedOn = c.DateTime(nullable: false),
+                        ReadDate = c.DateTime(),
                         Type = c.String(),
                         Payload = c.String(),
+                        FailureMessage = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
